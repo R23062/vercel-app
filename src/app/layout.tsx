@@ -1,9 +1,9 @@
+import "./globals.css"; // 👈 これが CSS を読み込む重要な一行です！
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mini X 掲示板",
-  description: "Next.jsとSupabaseで作ったリアルタイム掲示板",
+  title: "Mini Message Board",
+  description: "Next.js + Supabase 掲示板",
 };
 
 export default function RootLayout({
@@ -13,9 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="antialiased">
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
